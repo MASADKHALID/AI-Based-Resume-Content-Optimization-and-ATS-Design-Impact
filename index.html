@@ -131,17 +131,19 @@
         </section>
         <section class="section">
             <h2>Results</h2>
+            <p>This section presents the experimental results obtained from evaluating multiple resume versions using different Applicant Tracking System (ATS) tools. The results are reported using a combination of tables and figures to summarize ATS scores, design-related feedback, section-level sensitivity, and the effect of AI-based resume optimization.</p>
             <h3>ATS Score Distribution Across ATS Tools</h3>
             <p>To analyze differences in ATS evaluation behavior, average ATS scores were calculated for each ATS tool across all resume versions. The results show noticeable variation in average ATS scores among the tools, indicating differences in strictness and scoring behavior.</p>
+            <p>As summarized in Table 1, A hiring message produced the lowest average ATS score, while Free Resumes produced the highest average score. The comparative trend across ATS tools is visualized in Figure 1.</p>
             <table>
                 <thead>
-                    <tr><th>ATS Tool</th><th>Average Score</th></tr>
+                    <tr><th>ATS_tool</th><th>AVERAGE</th></tr>
                 </thead>
                 <tbody>
                     <tr><td>A hiring message</td><td>42.8</td></tr>
                     <tr><td>enhance</td><td>65.5</td></tr>
                     <tr><td>Free Resumes</td><td>85.2</td></tr>
-                    <tr><td>Grand Total</td><td>64.4</td></tr>
+                    <tr><td>Grand Total</td><td>64.42857143</td></tr>
                 </tbody>
             </table>
             <div class="figure">
@@ -149,6 +151,8 @@
                 <div>Figure 1: ATS Score Distribution Across ATS Tools</div>
             </div>
             <h3>Design Recommendations Frequency</h3>
+            <p>ATS feedback related to resume design and formatting was aggregated to identify the most frequently reported recommendations. The results indicate that spacing, use of strong action verbs, and resume length were the most common areas requiring improvement.</p>
+            <p>The frequency distribution of design recommendations is presented in Table 2, while the relative prominence of each recommendation is illustrated in Figure 2.</p>
             <table>
                 <thead>
                     <tr><th>Design Recommendation</th><th>Frequency</th></tr>
@@ -171,6 +175,8 @@
                 <div>Figure 2: Design Recommendations Frequency</div>
             </div>
             <h3>Essential Section Issues Identified by ATS</h3>
+            <p>The analysis of essential resume sections revealed differences in how frequently specific sections were flagged during ATS evaluation. The experience section was identified most frequently, followed by education, date formatting, and use of generic or weak phrases.</p>
+            <p>The frequency of essential section issues is summarized in Table 3. A visual comparison of section-level frequency is shown in Figure 3.</p>
             <table>
                 <thead>
                     <tr><th>Essential Section Issue</th><th>Frequency</th></tr>
@@ -194,6 +200,8 @@
                 <div>Figure 3: Essential Section Issues Identified by ATS</div>
             </div>
             <h3>Missing Details Analysis</h3>
+            <p>Missing resume details detected by ATS tools were recorded to identify common content omissions. Frequently missing details included LinkedIn profile information, contact information, skills, and the use of strong action verbs.</p>
+            <p>A detailed summary of missing details and their frequencies is provided in Table 4, while an aggregated visual representation is shown in Figure 4.</p>
             <table>
                 <thead>
                     <tr><th>Missing Detail</th><th>Frequency</th></tr>
@@ -220,12 +228,14 @@
                 <div>Figure 4: Missing Details Analysis</div>
             </div>
             <h3>Effect of AI-Based Resume Optimization</h3>
+            <p>To evaluate the impact of AI-based content optimization, average ATS scores before and after optimization were compared. Resume AII6 represents the initial AI-generated version, while resume AIF7 represents the refined version generated after incorporating dataset-derived optimization rules.</p>
+            <p>As shown in Table 5, the average ATS score increased substantially after optimization. This improvement is visually demonstrated in Figure 5, which compares average ATS scores before and after optimization.</p>
             <table>
                 <thead>
-                    <tr><th>Average after optimization</th><th>Average before optimization</th></tr>
+                    <tr><th>AVERAGE after optimization</th><th>AVERAGE before optimization</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td>81</td><td>64.4</td></tr>
+                    <tr><td>81</td><td>64.42857143</td></tr>
                 </tbody>
             </table>
             <div class="figure">
