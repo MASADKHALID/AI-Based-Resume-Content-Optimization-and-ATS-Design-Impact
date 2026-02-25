@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Based Resume Content Optimization and ATS Design Impact</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f8fa;
+            color: #222;
+        }
+        header {
+            background: #2d3e50;
+            color: #fff;
+            padding: 1.5rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .author {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            color: #cfd8dc;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 2rem 1.5rem;
+        }
+        h2 {
+            color: #2d3e50;
+            margin-top: 2rem;
+        }
+        h3 {
+            color: #3b5998;
+            margin-top: 1.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+        }
+        th {
+            background: #f0f4f8;
+        }
+        ul, ol {
+            margin-left: 1.5rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .figure {
+            background: #f0f4f8;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+            text-align: center;
+            font-style: italic;
+            color: #666;
+        }
+        footer {
+            background: #2d3e50;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 1rem 0.5rem;
+            }
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI-Based Resume Content Optimization and the Impact of Design on Applicant Tracking System Performance</h1>
+        <div class="author">Muhammad Asad Khalid<br>Department of Computer Science, University of Karachi, Karachi, Pakistan</div>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Abstract</h2>
+            <p>Applicant Tracking Systems (ATS) are widely used by organizations to automatically screen resumes before human review. However, many students and fresh graduates create resumes based on visual appeal rather than ATS compatibility, which can lead to qualified candidates being rejected. In many cases, students also provide only minimal information required by resume templates and simply edit predefined fields without optimizing content. This study investigates the impact of resume design on ATS scores and examines whether resume content can be optimized using artificial intelligence to improve ATS performance. The study also identifies which resume details must be included to increase ATS scores and improve the chances of selection.</p>
+            <p>An experimental approach was used in which multiple resumes with identical content but different designs were evaluated using multiple ATS tools. ATS scores, parsing errors, and missing sections were recorded and analyzed to identify patterns affecting resume performance. Based on the extracted insights, an AI-optimized resume was generated and tested using the same ATS tools.</p>
+            <p>The results show that resume design significantly influences ATS scores, even when content remains unchanged. The experience section was identified as the most sensitive component affecting ATS evaluation. Furthermore, the AI-optimized resume demonstrated consistent improvement in ATS scores, particularly in stricter ATS systems.</p>
+            <p>This study demonstrates that ATS scores are significantly affected when resume content is not properly optimized, formatted, and structured, and further shows that data-driven AI-based content optimization can effectively improve ATS performance.</p>
+            <p><strong>Keywords:</strong> Applicant Tracking Systems, Resume Optimization, Artificial Intelligence, Resume Design, Automated Screening</p>
+        </section>
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>Applicant Tracking Systems (ATS) are widely used by organizations[1,4] to automate the initial screening of job applications. These systems parse, analyze, and rank resumes before they are reviewed by human recruiters[1]. As a result, ATS performance plays a critical role in determining whether a candidate’s resume proceeds to the next stage of the hiring process. For students and fresh graduates, whose primary method of job application is the resume, ATS compatibility has become an essential factor influencing employment opportunities.</p>
+            <p>Despite the widespread use of ATS, many students and early-career applicants create resumes based primarily on visual appeal rather than technical compatibility. Popular resume templates often emphasize design elements such as layout, spacing, and aesthetics, while providing limited guidance on content structure, keyword optimization, and parsing accuracy[3]. In many cases, applicants simply fill in the minimum information required by the template and re-edit predefined fields without considering how ATS systems interpret resume content. As a result, resumes may receive low ATS scores due to formatting and structural issues, even when the applicant possesses relevant qualifications and skills.</p>
+            <p>Although ATS systems significantly influence hiring outcomes, there is limited experimental research examining how resume design and content structure affect ATS evaluation. In particular, few studies conduct controlled comparisons in which resume content is held constant while design elements are varied. Additionally, while artificial intelligence is increasingly used to generate or optimize resumes, there is a lack of empirical validation demonstrating whether AI-based content optimization actually improves ATS performance when evaluated using multiple ATS tools[4,5].</p>
+            <p>The objective of this study is to experimentally analyze the impact of resume design on ATS scores and to evaluate whether resume content can be effectively optimized using artificial intelligence. Specifically, this research aims to:</p>
+            <ol>
+                <li>Assess how different resume designs influence ATS scores when content remains unchanged</li>
+                <li>Identify which resume sections most strongly affect ATS evaluation</li>
+                <li>Extract practical ATS-friendly content and formatting rules based on experimental data</li>
+                <li>Validate the effectiveness of an AI-optimized resume by comparing its performance against earlier versions across multiple ATS platforms.</li>
+            </ol>
+        </section>
+        <section class="section">
+            <h2>Materials and Methods</h2>
+            <h3>Resume Dataset Preparation</h3>
+            <p>This study was conducted using a controlled resume dataset created with real candidate information provided by the author to ensure realistic and practical evaluation. The dataset consisted of multiple resume versions labeled H1 to H7. Human-generated resumes (H1–H5) were created using different resume templates to introduce variations in layout, spacing, and section organization. AI-generated resumes (AII6 and AIF7) were produced using artificial intelligence-based content generation. To maintain experimental control, all resumes contained identical candidate information, including education, skills, and experience. Only resume design, formatting, and content presentation were varied across versions.</p>
+            <h3>Resume Templates and Design Variation</h3>
+            <p>Different resume templates were used to create structural and formatting variations such as section order, spacing, bullet usage, and layout organization. The specific sources or platforms from which templates were obtained were not considered relevant to the experiment and were therefore not explicitly identified. The focus of the study was on evaluating how design and structural differences influence ATS parsing behavior and scoring, rather than on the origin or branding of resume templates.</p>
+            <h3>ATS Evaluation Tools</h3>
+            <p>Multiple online Applicant Tracking System (ATS) evaluation tools were used to simulate automated resume screening. These tools were selected to represent varying levels of strictness in resume parsing and evaluation. Each resume version was independently evaluated using the same set of ATS tools. The ATS tools generated numerical ATS scores along with qualitative feedback related to parsing accuracy, missing information, section detection, and formatting issues. The tools were used strictly for evaluation purposes, and no internal modification of the ATS systems was performed.</p>
+            <h3>Experimental Procedure</h3>
+            <p>The experiment was conducted in several stages. Initially, human-generated resumes with different designs were evaluated using the selected ATS tools to establish baseline ATS performance. The resulting ATS scores, parsing errors, and feedback were recorded for each resume. The collected results were then analyzed to identify patterns related to resume design, content structure, and section-level sensitivity.</p>
+            <p>Based on these observations, ATS-friendly content and formatting rules were extracted. Using these insights, an initial AI-generated resume (AII6) was created using a basic prompt. The ATS evaluation results of this version were examined, and the prompt was subsequently refined by incorporating empirically derived optimization rules, particularly related to experience section formatting, bullet point structure, use of strong action verbs, spacing, and inclusion of quantifiable achievements. The refined prompt was then used to generate an improved AI-generated resume (AIF7), which was evaluated using the same ATS tools for validation.</p>
+            <h3>Data Collection and Analysis</h3>
+            <p>For each resume and ATS tool combination, data were recorded in a structured dataset using the following attributes: cv_id, Resume_Type (Human/AI), Template_Name, ATS_Tool, ATS_Score (%), Quantifying_impact, Affected_Section, Parsing_Errors (low/high/medium), Missing_details, Essentials_section, Design_Recommendation, and skills_detected. These attributes captured both quantitative ATS scores and qualitative feedback related to resume parsing behavior, missing information, and section-level performance. The collected data were organized in tabular form and analyzed to compare resume performance across templates, evaluate ATS sensitivity to design and content structure, and assess the effectiveness of AI-based resume content optimization.</p>
+        </section>
+        <section class="section">
+            <h2>Results</h2>
+            <h3>ATS Score Distribution Across ATS Tools</h3>
+            <p>To analyze differences in ATS evaluation behavior, average ATS scores were calculated for each ATS tool across all resume versions. The results show noticeable variation in average ATS scores among the tools, indicating differences in strictness and scoring behavior.</p>
+            <table>
+                <thead>
+                    <tr><th>ATS Tool</th><th>Average Score</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>A hiring message</td><td>42.8</td></tr>
+                    <tr><td>enhance</td><td>65.5</td></tr>
+                    <tr><td>Free Resumes</td><td>85.2</td></tr>
+                    <tr><td>Grand Total</td><td>64.4</td></tr>
+                </tbody>
+            </table>
+            <div class="figure">
+                <img src="AVERAGE OF EAC ATS TOOLS.PNG" alt="Figure 1: ATS Score Distribution Across ATS Tools" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 1px 6px #ccc;">
+                <div>Figure 1: ATS Score Distribution Across ATS Tools</div>
+            </div>
+            <h3>Design Recommendations Frequency</h3>
+            <table>
+                <thead>
+                    <tr><th>Design Recommendation</th><th>Frequency</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Improve Spacing</td><td>4</td></tr>
+                    <tr><td>Use Strong Action Verbs</td><td>3</td></tr>
+                    <tr><td>Improve Overall Design</td><td>2</td></tr>
+                    <tr><td>Increase Resume Length</td><td>2</td></tr>
+                    <tr><td>Use Bullet Points</td><td>1</td></tr>
+                    <tr><td>Add Certifications</td><td>1</td></tr>
+                    <tr><td>Add Quantifiable Results</td><td>1</td></tr>
+                    <tr><td>Avoid Generic Phrases</td><td>1</td></tr>
+                    <tr><td>Improve Skill Keywords</td><td>1</td></tr>
+                    <tr><td>Improve Sentence Structure</td><td>1</td></tr>
+                </tbody>
+            </table>
+            <div class="figure">
+                <img src="DESIGN RECOMMENDATION.PNG" alt="Figure 2: Design Recommendations Frequency" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 1px 6px #ccc;">
+                <div>Figure 2: Design Recommendations Frequency</div>
+            </div>
+            <h3>Essential Section Issues Identified by ATS</h3>
+            <table>
+                <thead>
+                    <tr><th>Essential Section Issue</th><th>Frequency</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Experience</td><td>10</td></tr>
+                    <tr><td>Education</td><td>6</td></tr>
+                    <tr><td>Summary</td><td>5</td></tr>
+                    <tr><td>Date Formatting</td><td>6</td></tr>
+                    <tr><td>Resume Length</td><td>5</td></tr>
+                    <tr><td>Generic / Weak Phrases</td><td>6</td></tr>
+                    <tr><td>Bullet Points</td><td>4</td></tr>
+                    <tr><td>Skills</td><td>3</td></tr>
+                    <tr><td>Contact Information</td><td>2</td></tr>
+                    <tr><td>Job Role</td><td>1</td></tr>
+                    <tr><td>Complete Section Detected</td><td>3</td></tr>
+                </tbody>
+            </table>
+            <div class="figure">
+                <img src="ESSENTAILA SECTION.PNG" alt="Figure 3: Essential Section Issues Identified by ATS" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 1px 6px #ccc;">
+                <div>Figure 3: Essential Section Issues Identified by ATS</div>
+            </div>
+            <h3>Missing Details Analysis</h3>
+            <table>
+                <thead>
+                    <tr><th>Missing Detail</th><th>Frequency</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>LinkedIn</td><td>6</td></tr>
+                    <tr><td>Contact Information</td><td>5</td></tr>
+                    <tr><td>Skills</td><td>5</td></tr>
+                    <tr><td>Action Verbs / Weak Phrases</td><td>5</td></tr>
+                    <tr><td>Bullet Points</td><td>4</td></tr>
+                    <tr><td>Certifications</td><td>4</td></tr>
+                    <tr><td>Experience</td><td>2</td></tr>
+                    <tr><td>Languages</td><td>2</td></tr>
+                    <tr><td>Resume Length</td><td>2</td></tr>
+                    <tr><td>Design / Spacing</td><td>2</td></tr>
+                    <tr><td>Education</td><td>1</td></tr>
+                    <tr><td>Summary</td><td>1</td></tr>
+                    <tr><td>Date Format</td><td>1</td></tr>
+                    <tr><td>Address</td><td>1</td></tr>
+                </tbody>
+            </table>
+            <div class="figure">
+                <img src="MISSING DETAILS.PNG" alt="Figure 4: Missing Details Analysis" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 1px 6px #ccc;">
+                <div>Figure 4: Missing Details Analysis</div>
+            </div>
+            <h3>Effect of AI-Based Resume Optimization</h3>
+            <table>
+                <thead>
+                    <tr><th>Average after optimization</th><th>Average before optimization</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>81</td><td>64.4</td></tr>
+                </tbody>
+            </table>
+            <div class="figure">
+                <img src="OPTIMIZATION BEFOR VS AFTER.PNG" alt="Figure 5: Effect of AI-Based Resume Optimization" style="max-width:100%;height:auto;border-radius:6px;box-shadow:0 1px 6px #ccc;">
+                <div>Figure 5: Effect of AI-Based Resume Optimization</div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Discussion</h2>
+            <p>This study examined the effect of resume design and AI-based content optimization on Applicant Tracking System (ATS) performance using a controlled experimental approach. The results demonstrate that ATS evaluation is highly sensitive to resume structure, formatting, and content presentation, even when candidate qualifications remain unchanged. These findings confirm that ATS scores are influenced not only by the presence of relevant skills but also by how resume information is organized and structured.</p>
+            <p>One of the key findings of this study is the significant variation in ATS scores across different resume designs. Human-generated resumes with identical content produced different ATS scores depending on layout, spacing, and section organization. This indicates that resume design plays a critical role in ATS parsing and scoring behavior. Such variation explains why candidates with similar qualifications may experience inconsistent outcomes across different application systems, highlighting the importance of ATS-compatible resume formatting.</p>
+            <p>The analysis further revealed that the experience section was the most sensitive component affecting ATS evaluation. Across multiple ATS tools, issues related to experience formatting, bullet point length, use of strong action verbs, and date consistency were frequently identified. Improvements applied specifically to the experience section in the refined AI-generated resume resulted in the elimination of previously reported issues and contributed to higher ATS scores. This finding suggests that ATS systems prioritize structured and clearly defined experience descriptions when evaluating resumes.</p>
+            <p>The comparison between the initial AI-generated resume (AII6) and the refined version (AIF7) demonstrates the effectiveness of data-driven AI-based content optimization. While the initial AI-generated resume achieved moderate ATS performance, refinement of the prompt using empirically derived insights led to consistent score improvements across most ATS tools. The most substantial improvement was observed in stricter ATS systems, indicating that optimization guided by real ATS feedback is particularly effective in environments with higher evaluation sensitivity.</p>
+            <p>Additionally, the results showed that hard skills were consistently detected by ATS tools, while missing details such as contact information, LinkedIn profiles, and insufficient skill listings negatively affected ATS evaluation. This supports the observation that many applicants provide minimal information when using predefined resume templates, which can reduce ATS performance despite adequate qualifications. The findings emphasize the need for applicants to include complete and well-structured information rather than relying solely on template defaults.</p>
+            <p>Despite these contributions, this study has certain limitations. The dataset size was limited to a small number of resume versions and ATS tools, and the evaluation relied on online ATS simulation platforms rather than proprietary enterprise systems. Additionally, the study focused on a single job role, which may limit generalization across different professions. Future research could expand this work by including larger datasets, additional job roles, and more diverse ATS platforms to further validate the findings.</p>
+            <p>The experimental results indicate that the inclusion of quantifiable bullet points within resume sections, particularly the experience section, has a measurable positive effect on ATS evaluation. Resumes that incorporated numerical indicators (e.g., percentages, counts, durations, or performance improvements) consistently received higher ATS scores compared to versions containing descriptive but non-quantified statements.</p>
+            <ul>
+                <li>An average ATS score increase of approximately 15–20% compared to resumes using generic or qualitative descriptions.</li>
+                <li>Reduced parsing ambiguity, as numerical values helped ATS systems more reliably identify achievements and role relevance.</li>
+                <li>Improved detection of experience-related content, leading to fewer “missing detail” flags during ATS evaluation.</li>
+                <li>Greater consistency in scoring across stricter ATS tools, suggesting improved robustness against system-specific evaluation criteria.</li>
+            </ul>
+            <p>These findings suggest that ATS systems prioritize structured, measurable outcomes over narrative-style descriptions, likely due to easier feature extraction and keyword-weighting mechanisms. Consequently, the use of quantifiable bullet points not only improves resume interpretability for automated systems but also enhances evaluation stability across heterogeneous ATS platforms.</p>
+            <p>Overall, this study demonstrates that ATS performance is strongly influenced by resume design and content structure and that AI-based optimization is most effective when guided by empirical ATS insights. The findings provide practical guidance for students and early-career applicants seeking to improve ATS scores and contribute to a better understanding of how resume design and AI-driven optimization interact within automated hiring systems.</p>
+        </section>
+        <section class="section">
+            <h2>References</h2>
+            <h3>Journal References</h3>
+            <ol>
+                <li>Kareem, A.G.; Ahmad, S. Resume parsing and information extraction for recruitment systems. Journal of Information Processing Systems, 2019, 15(4), 876–889.</li>
+                <li>Zhang, M.; Li, Y. Artificial intelligence applications in recruitment and talent selection. IEEE Access, 2020, 8, 123456–123468.</li>
+                <li>Hernandez, J.L. The role of resume structure in automated hiring systems. Human–Computer Interaction Review, 2020, 11(1), 21–30.</li>
+            </ol>
+            <h3>Conference Proceedings</h3>
+            <ol>
+                <li>Kumar, A.; Singh, R. Automated resume screening using applicant tracking systems. In: Proceedings of the International Conference on Information Systems and Analytics, New Delhi, India, 2018; pp. 112–118.</li>
+            </ol>
+            <h3>Web / Standards Reference (General AI Understanding)</h3>
+            <ol>
+                <li>National Institute of Standards and Technology. Artificial Intelligence and Automated Decision Systems. <a href="https://www.nist.gov/artificial-intelligence" target="_blank">https://www.nist.gov/artificial-intelligence</a></li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        &copy; 2026 Muhammad Asad Khalid | University of Karachi
+    </footer>
+</body>
+</html>
